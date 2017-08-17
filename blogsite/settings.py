@@ -11,6 +11,7 @@ CELERY_BROKER_URL = 'amqp://'
 # The backend results settings that will be used: default, and the database is db
 CELERY_RESULT_BACKEND = 'redis://localhost:6379'
 
+# Celery Data Format
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'

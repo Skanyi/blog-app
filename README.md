@@ -26,8 +26,24 @@ Test Celery task scheduler is ready for action:
 ```celery -A blogsite beat -l info```
 
 <!-- start the rabittmq server -->
+Am on Mac Os, 
+```brew services rabbitmq start```
+
+# after this works I will try to do the same on ubuntu server
 
 <!-- Create a task that sends email after every 24 hours -->
+what do i want to accomplish here. 
+#overview
+simply send an email to a specific email from a specific sender 
+send an email to user with a specific email. 
+
+# how to do it:
+Have an email functions that send the email, it has the email message crafted already.
+
+Use the task schedular to decide when the email is sent. 
+
+<!-- what to do next: take a step back and look at what is happening and understand how the tasks are executed and then write the taks
+This will ensure i understand the flow logic and can debug why a task was not executed at set time -->
 
 resources:
 https://github.com/celery/celery/blob/master/examples/django/proj/settings.py
