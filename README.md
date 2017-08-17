@@ -3,17 +3,31 @@ A simple django application that uses celery to schedule tasks.
 
 What remains right now:
 
+Use rabbitmq as message broker and redis as backend result handler
+
 # This is what is used to for transmitting the messages
 Configure message broker - rabbitmq
 
 # this is the database that will store the results of the worker
 ResultBackend
 Result backend to use for keeping task states and results.
-Configure the results backend - not sure to either use django orm or redis. 
+Configure the results backend - not sure to either use django orm or redis. used redis
 
 # create tasks. 
 Create a send email task that is schedule to run after every 24 hours. 
 
+
+<!-- Start the celery worker to monitor what is happening. On production you want to start the worker on the bg 
+for development and testing it is okay-->
+Test that the Celery worker is ready to receive tasks:
+```celery -A blogsite worker -l info```
+
+Test Celery task scheduler is ready for action:
+```celery -A blogsite beat -l info```
+
+<!-- start the rabittmq server -->
+
+<!-- Create a task that sends email after every 24 hours -->
 
 resources:
 https://github.com/celery/celery/blob/master/examples/django/proj/settings.py
