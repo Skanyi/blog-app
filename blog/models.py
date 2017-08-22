@@ -9,3 +9,8 @@ class Post(models.Model):
 class Likes(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     likes_count = models.IntegerField(default=0)
+
+class Email(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField()
+    message = models.TextField()

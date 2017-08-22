@@ -51,3 +51,5 @@ https://realpython.com/blog/python/asynchronous-tasks-with-django-and-celery/
 http://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html#beat-custom-schedulers
 https://www.digitalocean.com/community/tutorials/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps
 https://www.codementor.io/ankurrathore/asynchronous-task-with-rabbitmq-celery-and-django-8904ceway
+
+https://code.tutsplus.com/tutorials/using-celery-with-django-for-background-task-processing--cms-28732

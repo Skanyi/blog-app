@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <h2>Home</h2>
+  <form action="/sell" method="POST">
+    {% csrf_token %}
+    {{ form.name.label }} {{ form.name }}
+    {{ form.descr.label }} {{ form.descr }}
+    {{ form.image.label }} {{ form.image }}
+    {{ form.price.label }} {{ form.price }}
+
+    <input type="submit" value="Submit"/> 
+</form>
+  
+{% endblock %}
